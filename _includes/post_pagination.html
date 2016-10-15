@@ -8,6 +8,6 @@
     {% endif %}
     <span class="page-number"> Page {{ paginator.page }} of {{ paginator.total_pages }} </span>
     {% if paginator.next_page %} 
-        <a class="older-posts" href="{{ site.baseurl }}page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
+        <p>{{ post.content | strip_html | slice:0,100}}  <a class="older-posts" href="{{ site.baseurl }}page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a></p>
     {% endif %} 
 </nav>
