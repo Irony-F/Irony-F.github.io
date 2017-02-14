@@ -10,19 +10,6 @@ class: 'post-template'
 
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
-body {
-    height: 100%;
-    max-height: 100%;
-    font-family: "Merriweather", serif;
-    letter-spacing: 0.01rem;
-    font-size: 1.8rem;
-    line-height: 1.75em;
-    color: #3A4145;
-    -webkit-font-feature-settings: 'kern' 1;
-    -moz-font-feature-settings: 'kern' 1;
-    -o-font-feature-settings: 'kern' 1;
-    text-rendering: geometricPrecision;
-}
 
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
@@ -121,9 +108,10 @@ body {
 
 <body>
 <!-- /post -->
-!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 start -->
+ 	<div class="ds-thread" data-thread-key="{dede:field.id/}" data-title="{dede:field.title/}">
 <!-- 多说评论框 end -->
+	
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"irony-f"};
