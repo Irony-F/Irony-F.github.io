@@ -10,6 +10,20 @@ class: 'post-template'
 
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: "Merriweather", serif;
+    letter-spacing: 0.01rem;
+    font-size: 1.8rem;
+    line-height: 1.75em;
+    color: #3A4145;
+    -webkit-font-feature-settings: 'kern' 1;
+    -moz-font-feature-settings: 'kern' 1;
+    -o-font-feature-settings: 'kern' 1;
+    text-rendering: geometricPrecision;
+}
+
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
@@ -102,6 +116,9 @@ class: 'post-template'
     </article>
 
 </main>
+
+
+
 <body>
 <!-- /post -->
 !-- 多说评论框 start -->
